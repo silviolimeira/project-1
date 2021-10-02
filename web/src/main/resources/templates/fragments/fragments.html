@@ -1,0 +1,76 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+</head>
+
+<body>
+
+	<div th:fragment="header">
+		<div>
+			<h1>Shopme Control Panel</h1>
+			<p th:text="'Time on the server is ' + ${dateServer}" />
+		</div>
+	</div>
+	
+	
+	<div th:fragment="footer">
+		<div>
+			<p>Shopme Control Panel - Copyright &copy; Shopme</p>
+		</div>	
+	</div>
+	
+
+	<div th:fragment="topNavigation">
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+	
+				<a class="navbar-brand" th:href="@{/}"> <img
+					th:src="@{/images/ShopmeAdminSmall.png}" />
+				</a>
+	
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+	
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link" th:href="@{/users}">Users</a></li>
+						<li class="nav-item"><a class="nav-link"
+							th:href="@{/categories}">Categories</a></li>
+						<li class="nav-item"><a class="nav-link" th:href="@{/brands}">Brands</a></li>
+						<li class="nav-item"><a class="nav-link"
+							th:href="@{/products}">Products</a></li>
+						<li class="nav-item"><a class="nav-link"
+							th:href="@{/customers}">Customers</a></li>
+						<li class="nav-item"><a class="nav-link"
+							th:href="@{/shipping}">Shipping</a></li>
+						<li class="nav-item"><a class="nav-link" th:href="@{/orders}">Orders</a></li>
+						<li class="nav-item"><a class="nav-link"
+							th:href="@{/salesreport}">Sales Report</a></li>
+						<li class="nav-item"><a class="nav-link"
+							th:href="@{/articles}">Articles</a></li>
+						<li class="nav-item"><a class="nav-link" th:href="@{/menus}">Menus</a></li>
+						<li class="nav-item"><a class="nav-link"
+							th:href="@{/settings}">Settings</a></li>
+	
+					</ul>
+					<!--<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search"
+							aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Search</button>
+					</form> -->
+				</div>
+			</div>
+		</nav>
+	
+	</div>
+
+
+</body>
+
+</html>

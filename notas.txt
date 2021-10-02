@@ -1,0 +1,39 @@
+
+
+ref: Java no Visual Studio Code: Projetos com Spring Boot
+https://www.youtube.com/watch?v=dkmlOi_MNb4
+
+
+gradle init
+
+Select type of project to generate:                 
+    2: application
+
+Select implementation language:                     
+    3: Java
+
+Split funcionality across multiple subprojects:     
+    1: no
+
+Select build script DSL:
+    1: Groovy
+
+Select test framework
+    1: JUnit 4
+
+Project name:
+    project-1
+
+Source package:
+    com.sl.project1
+
+
+gradle tasks --all
+
+# CRIANDO UMA TASK
+gradle pPN // or // gradle printProjectName
+
+gradle :web:clean
+gradle :web:pPN // or // gradle :web:printProjectName
+
+gradle build -x test

@@ -4,8 +4,8 @@
 package com.sl.config;
 
 import com.sl.config.dao.ConfigJdbcDAO;
-import com.sl.config.service.ConfigService;
-import org.springframework.context.ApplicationContext;
+import com.sl.config.dao.PersonDAO;
+import com.sl.config.model.Person;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -20,11 +20,57 @@ public class Config {
     public static void main(String[] args) {
         //System.out.println(new Config().getGreeting());
         //getDB(1);
-        System.out.println("Hello, spring");
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-        ConfigService service = applicationContext.getBean("configService", ConfigService.class);
-        System.out.println(service.list());
 
+        //step 2
+//        System.out.println("Hello, spring");
+//        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+//        ConfigService service = applicationContext.getBean("configService", ConfigService.class);
+//        System.out.println(service.list());
+        testPersonDAO();
+    }
+
+    public static void testPersonDAO() {
+
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        PersonDAO personDAO = context.getBean(PersonDAO.class);
+
+        System.out.println("List of person is:");
+
+        for (Person p : personDAO.getAllPersons()) {
+            System.out.println(p);
+        }
+
+        System.out.println("\nGet person with ID 2");
+
+        Person personById = personDAO.getPersonById(2L).get(0);
+        System.out.println(personById);
+
+        System.out.println("\nCreating person: ");
+        Person person = new Person(4L, 36, "Sergey", "Emets");
+        System.out.println(person);
+        personDAO.createPerson(person);
+        System.out.println("\nList of person is:");
+
+        for (Person p : personDAO.getAllPersons()) {
+            System.out.println(p);
+        }
+
+        System.out.println("\nDeleting person with ID 2");
+        personDAO.deletePerson(personById);
+
+        System.out.println("\nUpdate person with ID 4");
+
+        Person pperson = personDAO.getPersonById(4L).get(0);
+        pperson.setLastName("CHANGED");
+        personDAO.updatePerson(pperson);
+
+        System.out.println("\nList of person is:");
+        for (Person p : personDAO.getAllPersons()) {
+            System.out.println(p);
+        }
+
+        context.close();
     }
 
     public static void test() {

@@ -3,7 +3,7 @@ allprojects {
     task printProjectName {
 
         doLast() {
-            println project.name;
+            println project.name
         }
 
     }

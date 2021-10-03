@@ -11,3 +11,4 @@ rootProject.name = 'project-1'
 include('app')
 include('utils')
 include('web')
+include('batch')

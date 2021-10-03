@@ -10,7 +10,8 @@ import org.springframework.context.annotation.Configuration;
 // ref: https://www.youtube.com/watch?v=e8aSyQo0nHo
 // ref list: https://www.youtube.com/watch?v=e8aSyQo0nHo&list=RDCMUCc98QQw1D-y38wg6mO3w4MQ&start_radio=1&rv=e8aSyQo0nHo&t=1787
 
-
+// TODO:  JdbcTemplate
+// ref https://www.journaldev.com/17053/spring-jdbctemplate-example
 
 @Configuration
 @ComponentScan("com.sl")

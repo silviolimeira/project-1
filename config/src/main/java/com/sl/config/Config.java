@@ -3,11 +3,14 @@
  */
 package com.sl.config;
 
+import com.sl.config.dao.ConfigJdbcDAO;
 import com.sl.config.service.ConfigService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.sql.*;
+import java.util.List;
 
 public class Config {
     public String getGreeting() {
@@ -21,7 +24,7 @@ public class Config {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
         ConfigService service = applicationContext.getBean("configService", ConfigService.class);
         System.out.println(service.list());
-        
+
     }
 
     public static void test() {
@@ -67,6 +70,26 @@ public class Config {
         }catch(Exception e){ System.out.println(e);}
 
         return null;
+
+    }
+
+    public static void getConfigList() {
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection connection= DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/project1?useTimezone=true&serverTimezone=UTC&useSSL=false","root","admin");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+
+        JdbcTemplate jdbcTemplate = new JdbcTemplate();
+        ConfigJdbcDAO configJdbcDAO = new ConfigJdbcDAO(jdbcTemplate);
+
+        List<com.sl.config.model.Config> configs = configJdbcDAO.list();
 
     }
 }

@@ -16,8 +16,12 @@ public class Config {
         this.password = password;
     }
 
+    public Config() {
+
+    }
+
     public String getUrl() {
-        return url;
+        return this.url;
     }
 
     public void setUrl(String url) {

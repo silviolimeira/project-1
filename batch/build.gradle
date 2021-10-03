@@ -48,16 +48,16 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    //mainClass = 'com.sl.batch.Batch'
-    mainClass = 'com.sl.batch.QuartzExample'
+    mainClass = 'com.sl.batch.Batch'
+    //mainClass = 'com.sl.batch.QuartzExample'
 
 }
 
 jar {
     manifest {
         attributes(
-            //'Main-Class': 'com.sl.batch.Batch'
-            'Main-Class': 'com.sl.batch.QuartzExample'
+            'Main-Class': 'com.sl.batch.Batch'
+            //'Main-Class': 'com.sl.batch.QuartzExample'
         )
     }
 }

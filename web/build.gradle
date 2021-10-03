@@ -4,7 +4,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id 'war'
-	
+
 }
 
 group = 'br.com.sl'
@@ -46,6 +46,7 @@ project (':web') {
 
 	dependencies {
 		implementation project(':utils')
+		implementation project(':batch')
 	}
 
 }

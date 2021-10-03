@@ -3,6 +3,10 @@
  */
 package com.sl.config;
 
+import com.sl.config.service.ConfigService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import java.sql.*;
 
 public class Config {
@@ -11,8 +15,13 @@ public class Config {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Config().getGreeting());
-        getDB(1);
+        //System.out.println(new Config().getGreeting());
+        //getDB(1);
+        System.out.println("Hello, spring");
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+        ConfigService service = applicationContext.getBean("configService", ConfigService.class);
+        System.out.println(service.list());
+        
     }
 
     public static void test() {

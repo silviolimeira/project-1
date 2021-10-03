@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 @SpringBootApplication
 public class Project1Application {
@@ -17,6 +18,11 @@ public class Project1Application {
 	@PostConstruct
 	public void batch() {
 		QuartzExample.test();
+	}
+
+	@PreDestroy
+	public void preDestroy() {
+
 	}
 
 }

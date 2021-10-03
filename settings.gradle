@@ -8,6 +8,7 @@
  */
 
 rootProject.name = 'project-1'
+include('config')
 include('app')
 include('utils')
 include('web')

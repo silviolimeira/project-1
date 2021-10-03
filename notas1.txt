@@ -1,0 +1,78 @@
+Gradle Multimodule:
+https://www.youtube.com/watch?v=DG9B2w-N42s
+
+
+ref: https://www.youtube.com/watch?v=IucFDX3RO9U&t=427s
+
+ref: Spring Boot Thymeleaf Fragments and conditional Fragments:
+ref: https://www.youtube.com/watch?v=XcUl1XvHKVU
+
+
+Install Lombok
+  Install new Software ...
+  	url : https://projectlombok.org/p2
+
+1) Create a Spring Starter Project
+
+
+2) Spring Dependencies:
+   Lombok
+   Spring Data JPA
+   MySQL Driver
+   Spring Web
+
+
+3) Configure the application.properties
+
+    server.port=80
+    server.servlet.context-path=/
+
+    spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+    spring.datasource.url=jdbc:mysql://localhost:3306/shopmedb
+    spring.datasource.username=root
+    spring.datasource.password=admin
+    spring.jpa.show-sql=true
+    spring.jpa.hibernate.ddl-auto=none
+    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+
+    spring.jpa.properties.hibernate.format_sql=true
+    logging.level.org.hibernate.SQL=DEBUG
+    logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+    logging.level.org.springframework.jdbc.core.JdbcTemplate=DEBUG
+    logging.level.org.springframework.jdbc.core.StatementCreatorUtils=TRACE
+
+
+4) Se Preferir configure application.yml
+
+    logging:
+    level:
+        org:
+        hibernate:
+            SQL: DEBUG
+            type:
+            descriptor:
+                sql:
+                BasicBinder: TRACE
+        springframework:
+            jdbc:
+            core:
+                JdbcTemplate: DEBUG
+                StatementCreatorUtils: TRACE
+    server:
+    port: 80
+    servlet:
+        context-path: /
+    spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: admin
+        url: jdbc:mysql://localhost:3306/project1
+        username: root
+    jpa:
+        hibernate:
+        ddl-auto: none
+        properties:
+        hibernate:
+            dialect: org.hibernate.dialect.MySQL5Dialect
+            format_sql: true
+        show-sql: true

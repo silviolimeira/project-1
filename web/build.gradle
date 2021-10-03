@@ -47,6 +47,7 @@ project (':web') {
 	dependencies {
 		implementation project(':utils')
 		implementation project(':batch')
+		implementation project(':config')
 	}
 
 }

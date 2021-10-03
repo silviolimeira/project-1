@@ -18,8 +18,9 @@ public class Project1Application {
 
 	@PostConstruct
 	public void batch() {
-		QuartzExample.test();
-		System.out.println("Database name: " + Config.getDB(1));
+		//QuartzExample.test();
+		//System.out.println("Database name: " + Config.getDB(1));
+		Config.testPersonDAO();
 	}
 
 	@PreDestroy

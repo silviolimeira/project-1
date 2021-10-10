@@ -8,6 +8,8 @@
  */
 
 rootProject.name = 'project-1'
+include('data-wboot')
+include('web-data-wboot')
 include('config')
 include('app')
 include('utils')

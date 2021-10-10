@@ -16,8 +16,10 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/batch" />
             <option value="$PROJECT_DIR$/config" />
+            <option value="$PROJECT_DIR$/data-wboot" />
             <option value="$PROJECT_DIR$/utils" />
             <option value="$PROJECT_DIR$/web" />
+            <option value="$PROJECT_DIR$/web-data-wboot" />
           </set>
         </option>
       </GradleProjectSettings>

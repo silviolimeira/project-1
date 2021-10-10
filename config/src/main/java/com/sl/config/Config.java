@@ -41,9 +41,9 @@ public class Config {
             System.out.println(p);
         }
 
-        System.out.println("\nGet person with ID 2");
+        System.out.println("\nGet person with ID 3");
 
-        Person personById = personDAO.getPersonById(2L).get(0);
+        Person personById = personDAO.getPersonById(3L).get(0);
         System.out.println(personById);
 
         System.out.println("\nCreating person: ");
@@ -56,8 +56,8 @@ public class Config {
             System.out.println(p);
         }
 
-        System.out.println("\nDeleting person with ID 2");
-        personDAO.deletePerson(personById);
+        //System.out.println("\nDeleting person with ID 2");
+        //personDAO.deletePerson(personById);
 
         System.out.println("\nUpdate person with ID 4");
 

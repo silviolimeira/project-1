@@ -3,7 +3,9 @@
  */
 package com.sl.config;
 
+import com.sl.tool.Tool;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ToolTest {

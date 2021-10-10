@@ -1,12 +1,9 @@
 package br.com.sl.controller;
 
+import com.sl.data.CustomerTest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-//import com.sl.tool.Tool;
-import com.sl.batch.*;
-//import com.sl.data.JpaExample;
 
 @Controller
 public class HomeController {
@@ -20,6 +17,10 @@ public class HomeController {
 		
 		// Test Quartz
 		//QuartzExample.test();
+
+		//JpaExample.test();
+
+		CustomerTest.test();
 
 		return "home";
 	}

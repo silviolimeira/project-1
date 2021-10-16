@@ -1,6 +1,14 @@
 
 Configurando o Pool de conexoes spring jpa:
-http://wiki.integrator.com.br/index.php?title=Pool_de_conex%C3%B5es_com_Spring_Boot
+Pool de conexões com Spring Boot
+ref: http://wiki.integrator.com.br/index.php?title=Pool_de_conex%C3%B5es_com_Spring_Boot
+  Pool de Conexões com HikariCP, and too
+    Pool de Conexões com Tomcat
+
+Downloads for Amazon Corretto 11
+https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html
+
+curl -LO https://corretto.aws/downloads/latest/amazon-corretto-11-x64-linux-jdk.tar.gz
 
 
 ref: Java no Visual Studio Code: Projetos com Spring Boot

@@ -11,8 +11,11 @@ https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html
 curl -LO https://corretto.aws/downloads/latest/amazon-corretto-11-x64-linux-jdk.tar.gz
 
 // Enable Cross-Origin Resource Sharing in REST
-https://www.youtube.com/watch?v=FQrlp8YB7DA&t=28s
+ref1: https://www.youtube.com/watch?v=FQrlp8YB7DA&t=28s
+ref2: https://www.youtube.com/watch?v=Ly79YDERpas
 
+// Spring & Spring Data JPA: Managing Transactions
+ref: https://www.youtube.com/watch?v=SUQxXg229Xg
 
 ref: Java no Visual Studio Code: Projetos com Spring Boot
 https://www.youtube.com/watch?v=dkmlOi_MNb4

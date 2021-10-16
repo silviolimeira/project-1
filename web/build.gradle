@@ -40,6 +40,9 @@ dependencies {
 	implementation group: 'org.webjars', name: 'webjars-locator-core', version: '0.48'
 	implementation group: 'org.webjars', name: 'bootstrap', version: '5.0.1'
 
+	// https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jdbc
+	implementation group: 'org.apache.tomcat', name: 'tomcat-jdbc', version: '7.0.28'
+
 }
 
 project (':web') {
@@ -47,6 +50,7 @@ project (':web') {
 	dependencies {
 		implementation project(':utils')
 		implementation project(':batch')
+		implementation project(':spring-jpa')
 		//implementation project(':config')
 		//implementation project(':data')
 	}

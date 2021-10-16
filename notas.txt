@@ -1,4 +1,7 @@
 
+Configurando o Pool de conexoes spring jpa:
+http://wiki.integrator.com.br/index.php?title=Pool_de_conex%C3%B5es_com_Spring_Boot
+
 
 ref: Java no Visual Studio Code: Projetos com Spring Boot
 https://www.youtube.com/watch?v=dkmlOi_MNb4

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-	@CrossOrigin(origins="http://localhost:9090")
+	//@CrossOrigin(origins="http://localhost:9090")
 	@GetMapping("/home")
 	public String sayHello(Model theModel) {
 		theModel.addAttribute("dateServer", new java.util.Date());

@@ -1,7 +1,7 @@
-package com.sl.transaction.controller;
+package com.sl.jwt.controller;
 
-import com.sl.transaction.controller.dto.AppointmentFormDto;
-import com.sl.transaction.service.BookAppointmentService;
+import com.sl.jwt.controller.dto.AppointmentFormDto;
+import com.sl.jwt.service.BookAppointmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

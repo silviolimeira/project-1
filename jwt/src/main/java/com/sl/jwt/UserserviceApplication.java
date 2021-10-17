@@ -1,13 +1,13 @@
-package com.sl.transaction;
+package com.sl.jwt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringTransactionDemoApplication {
+public class UserserviceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringTransactionDemoApplication.class, args);
+        SpringApplication.run(UserserviceApplication.class, args);
     }
 
 }

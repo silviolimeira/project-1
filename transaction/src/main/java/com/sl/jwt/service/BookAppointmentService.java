@@ -1,14 +1,13 @@
-package com.sl.transaction.service;
+package com.sl.jwt.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sl.transaction.controller.dto.AppointmentFormDto;
-import com.sl.transaction.entity.Appointment;
-import com.sl.transaction.entity.Patient;
-import com.sl.transaction.repository.AppointmentRepo;
-import com.sl.transaction.repository.PatientRepo;
+import com.sl.jwt.controller.dto.AppointmentFormDto;
+import com.sl.jwt.domain.Appointment;
+import com.sl.jwt.domain.Patient;
+import com.sl.jwt.repository.AppointmentRepo;
+import com.sl.jwt.repository.PatientRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 
 import javax.transaction.Transactional;

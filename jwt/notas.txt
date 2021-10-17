@@ -1,0 +1,10 @@
+
+Spring Boot and Spring Security with JWT including Access and Refresh Tokens
+
+ref: https://www.youtube.com/watch?v=VVn9OG9nfH0&list=RDCMUC2KfmYEM4KCuA1ZurravgYw&index=1
+18:07
+
+
+Spring Transaction Management with Spring Data JPA
+
+ref: https://www.youtube.com/watch?v=vDZRuwaemLQ

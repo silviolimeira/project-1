@@ -1,4 +1,4 @@
-package com.sl.transaction.entity;
+package com.sl.jwt.domain;
 
 import lombok.Getter;
 import lombok.Setter;

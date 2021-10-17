@@ -1,4 +1,4 @@
-package com.sl.transaction.controller.dto;
+package com.sl.jwt.controller.dto;
 
 import lombok.Getter;
 import lombok.Setter;

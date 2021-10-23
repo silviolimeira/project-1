@@ -1,6 +1,5 @@
-package com.sl.javafuncional;
+package com.sl.imperative;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;

@@ -1,4 +1,4 @@
-package com.sl.javafuncional.imperative;
+package com.sl.imperative;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -105,3 +105,4 @@ public class Main {
     }
 
 }
+

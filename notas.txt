@@ -1,3 +1,6 @@
+Gradle Version  =======
+    Gradle 7.2
+
 
 Configurando o Pool de conexoes spring jpa:
 Pool de conexões com Spring Boot

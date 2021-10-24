@@ -10,6 +10,9 @@ import java.util.stream.Stream;
 //Java Stream API
 //ref: http://tutorials.jenkov.com/java-functional-programming/streams.html
 
+// Java Concurrency and Multithreading
+//ref: https://www.youtube.com/watch?v=mTGdtC9f4EU&list=PLL8woMHwr36EDxjUoCzboZjedsnhLP1j4&index=1
+
 public class S_Java_Stream_API {
 
     private static class User
@@ -74,7 +77,7 @@ public class S_Java_Stream_API {
                 user.setName(user.name.toLowerCase(Locale.ROOT));
                 return user;
             });
-//            .forEach((User user) -> {
+//            .forEach((User user) -> {  //
 //                System.out.println(String.format("User: %s", user));
 //            });
         System.out.println(input.collect(Collectors.toSet()));

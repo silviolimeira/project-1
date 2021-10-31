@@ -6,10 +6,13 @@ import com.sl.jwt.service.UserService;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
 import java.util.List;
 
@@ -20,10 +23,14 @@ public class UserResource {
 
     private final UserService userService;
 
+    //@PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_SUPER_ADMIN')")
     @GetMapping("/users")
-    public ResponseEntity<List<User>> getUsers() {
-
-        return ResponseEntity.ok().body(userService.getUsers());
+    public ResponseEntity<List<User>> getUsers(HttpServletRequest request) {
+        if (request.isUserInRole("ROLE_ADMIN")) {
+            return ResponseEntity.ok().body(userService.getUsers());
+        }
+        // TODO: return error instead null
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 
     }
 

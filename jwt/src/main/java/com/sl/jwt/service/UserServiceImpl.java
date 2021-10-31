@@ -29,6 +29,25 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     private final RoleRepo roleRepo;
     private final PasswordEncoder passwordEncoder;
 
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userRepo.findByUsername(username);
+        if (user == null) {
+            log.error("User not found in the database");
+            throw new UsernameNotFoundException("User not foud in database");
+        } else {
+            log.info("User found in the database: {}", username);
+        }
+        Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
+        user.getRoles().forEach(role -> {
+            authorities.add(new SimpleGrantedAuthority(role.getName()));
+        });
+        return new org.springframework.security.core.userdetails.User(
+                user.getUsername(), user.getPassword(), authorities
+        );
+    }
+
+
 
     @Override
     public User saveUser(User user) {
@@ -65,21 +84,4 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         return userRepo.findAll();
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepo.findByUsername(username);
-        if (user == null) {
-            log.error("User not found in the database");
-            throw new UsernameNotFoundException("User not foud in database");
-        } else {
-            log.info("User found in the database: {}", username);
-        }
-        Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        user.getRoles().forEach(role -> {
-            new SimpleGrantedAuthority(role.getName());
-        });
-        return new org.springframework.security.core.userdetails.User(
-                user.getUsername(), user.getPassword(), authorities
-        );
-    }
 }

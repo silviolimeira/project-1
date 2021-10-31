@@ -6,3 +6,9 @@ ref: https://www.youtube.com/watch?v=VVn9OG9nfH0&list=RDCMUC2KfmYEM4KCuA1Zurravg
 Spring Transaction Management with Spring Data JPA
 
 ref: https://www.youtube.com/watch?v=vDZRuwaemLQ
+
+//TODO: make one http client to login
+
+Spring HTTP Client
+
+https://stackoverflow.com/questions/22338176/spring-http-client

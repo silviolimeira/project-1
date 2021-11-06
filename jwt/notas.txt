@@ -7,8 +7,13 @@ Spring Transaction Management with Spring Data JPA
 
 ref: https://www.youtube.com/watch?v=vDZRuwaemLQ
 
+Spring boot Interview Questions:
+ref: https://www.youtube.com/playlist?list=PLyHJZXNdCXsexOO1VQ4vs-BM2-8CKrixd
+
+
 //TODO: make one http client to login
 
 Spring HTTP Client
 
 https://stackoverflow.com/questions/22338176/spring-http-client
+

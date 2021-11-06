@@ -3,7 +3,7 @@ server:
 
 spring:
   profiles:
-    active: prod
-name: prod-YAML
-environment: production
+    active: dev
+name: dev-YAML
+environment: development
 enabled: true

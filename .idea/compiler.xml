@@ -10,6 +10,7 @@
         </processorPath>
         <module name="project-1.jwt.main" />
         <module name="project-1.transaction.main" />
+        <module name="project-1.jwt-report.main" />
         <module name="project-1.web-client.main" />
         <module name="project-1.web.main" />
         <module name="project-1.web-data-wboot.main" />

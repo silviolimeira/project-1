@@ -5,6 +5,7 @@
 build
 
 out/
+report.pdf
 #batch/out
 #config/out
 #utils/out

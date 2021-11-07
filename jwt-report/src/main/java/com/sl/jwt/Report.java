@@ -43,9 +43,8 @@ public class Report {
 //        "Atrasos",1,"13:30","17:30"
 
         List<Periodo> listPeriodo = new ArrayList<>();
-        listPeriodo.add(new Periodo("08:00 12:00", "13:30 17:30"));
-        listPeriodo.add(new Periodo("08:01 12:01", "13:31 17:31"));
-        listPeriodo.add(new Periodo("08:02 12:02", "13:32 17:32"));
+        listPeriodo.add(new Periodo("08:00", "12:00"));
+        listPeriodo.add(new Periodo("13:30", "17:30"));
 
         processLines(listPeriodo, "Horario de Trabalho", lines, seq);
 

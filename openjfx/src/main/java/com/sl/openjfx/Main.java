@@ -1,11 +1,14 @@
 package com.sl.openjfx;
 
 import javafx.application.Application;
+import javafx.application.HostServices;
 import javafx.application.Platform;
 import javafx.stage.Stage;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ConfigurableApplicationContext;
+
+import java.io.File;
 
 public class Main extends Application {
 
@@ -14,6 +17,7 @@ public class Main extends Application {
     @Override
     public void init() {
         applicationContext = new SpringApplicationBuilder(App.class).run();
+
     }
 
     @Override
@@ -37,5 +41,9 @@ public class Main extends Application {
         }
     }
 
+    public void printReport(File file) {
+        HostServices hostServices = getHostServices();
+        hostServices.showDocument(file.getAbsolutePath());
+    }
 
 }

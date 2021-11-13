@@ -1,0 +1,19 @@
+module project {
+    requires spring.boot.autoconfigure;
+    requires spring.boot;
+//    requires sqlite.jdbc;
+    requires javafx.controls;
+    requires javafx.graphics;
+    requires java.sql;
+    requires java.desktop;
+    //requires javafx.fxml;
+    requires javafx.base;
+    requires spring.context;
+
+    exports com.sl.openjfx;
+//    exports com.sl.desafio.business;
+//    exports com.sl.desafio.model;
+//    exports com.sl.desafio.ui;
+
+    opens com.sl.openjfx;
+}

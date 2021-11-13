@@ -1,0 +1,10 @@
+
+JDK used
+
+OpenJDK Runtime Environment AdoptOpenJDK (build 14.0.2+12)
+Eclipse OpenJ9 VM AdoptOpenJDK (build openj9-0.21.0, JRE 14 Windows 10 amd64-64-Bit Compressed References 20200715_148 (JIT enabled, AOT e
+nabled)
+OpenJ9   - 34cf4c075
+OMR      - 113e54219
+JCL      - 1d231bd6a2 based on jdk-14.0.2+12
+

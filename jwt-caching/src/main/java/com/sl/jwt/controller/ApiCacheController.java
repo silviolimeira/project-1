@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api")
 @RequiredArgsConstructor
 @Slf4j
-public class ApiController {
+public class ApiCacheController {
 
     @Autowired
     private APIService aPIService;

@@ -1,9 +1,6 @@
 package com.sl.jwt.config;
 
-import java.util.Collection;
-
-import com.sl.jwt.handler.APIFilter;
-import org.springframework.cache.Cache;
+import com.sl.jwt.handler.APICacheFilter;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
@@ -15,11 +12,11 @@ import net.sf.ehcache.config.CacheConfiguration;
 
 @Configuration
 @EnableCaching
-public class APIConfig extends CachingConfigurerSupport {
+public class APICacheConfig extends CachingConfigurerSupport {
 
     @Bean
-    public APIFilter aPIFilter() {
-        return new APIFilter();
+    public APICacheFilter aPIFilter() {
+        return new APICacheFilter();
     }
 
     @Bean

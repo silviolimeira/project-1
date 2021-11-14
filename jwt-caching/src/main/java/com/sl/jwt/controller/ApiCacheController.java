@@ -4,6 +4,7 @@ import com.sl.jwt.domain.Student;
 import com.sl.jwt.service.APIService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import net.bytebuddy.implementation.bytecode.Throw;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -33,4 +34,17 @@ public class ApiCacheController {
     public String tstStudent() {
         return "tstStudent OK!";
     }
+
+    @GetMapping(value = "/error")
+    public String getDefaultErrorMessage() {
+
+        int b = 2;
+        if (b == 2) {
+            throw new RuntimeException("Show Default Error Message Handler");
+        }
+
+        return "OK";
+
+    }
 }
+

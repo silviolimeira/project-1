@@ -1,4 +1,4 @@
-package com.sl.patterns.Factory;
+package com.sl.patterns.creational.factory;
 
 abstract class Vehicle {
 

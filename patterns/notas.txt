@@ -1,0 +1,3 @@
+
+Design Patterns - Examples
+https://refactoring.guru/pt-br/design-patterns/java

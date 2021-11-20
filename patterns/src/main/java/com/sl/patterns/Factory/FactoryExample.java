@@ -1,6 +1,7 @@
 package com.sl.patterns.Factory;
 
 abstract class Vehicle {
+
     public abstract int getWheel();
 
     public String toString() {
@@ -20,6 +21,7 @@ class Car extends Vehicle {
     public int getWheel() {
         return this.wheel = wheel;
     }
+
 }
 
 class Bike extends Vehicle {
@@ -33,6 +35,7 @@ class Bike extends Vehicle {
     public int getWheel() {
         return this.wheel;
     }
+
 }
 
 class VehicleFactory {

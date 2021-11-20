@@ -61,6 +61,18 @@ Singleton Design pattern - Properties
 - Only one instance of the class should exist
 - Other classes should be able to get instance of Singleton class
 - Used in Logging, Cache, Session, Drivers
+
+# Implementation
+    - Constructor should be private
+    - Public method for returning instance
+    - Instance type - private static
+
+    Initialization Type:
+        - Eager Initialization
+        - Lazy Initialization
+        - Thread safe Method to Initialization
+        - Thread save block Initialization
+
 */
 
 public class SingletonExample {

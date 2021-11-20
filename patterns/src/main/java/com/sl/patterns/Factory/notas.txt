@@ -1,0 +1,14 @@
+Factory Design pattern - Properties
+
+- Creational design pattern
+- Used when we have multiple sub-classes of a Super class & based on
+  input we want to return one class instance
+- It provides abstraction between implementation & client classes
+- Remove the instantiation of client classes from client code
+
+Implementation
+
+- Super class can be interface or abstract class or basic class
+- Factory class has a static method which returns the instance of Sub-
+  class based on input
+

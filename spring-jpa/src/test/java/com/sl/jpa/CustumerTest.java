@@ -36,7 +36,7 @@ public class CustumerTest {
         List<Customer>  lista = repository.findByLastName("Bauer")
                 .stream().collect(Collectors.toList());
         //assertEquals("size incorrect", 2, students.size());
-        //assertNotNull("Customer found with findByLastName('Bauer'):", );
+        assertNotNull("Customer found with findByLastName('Bauer'):", lista);
         logger.info(lista.toString());
     }
 

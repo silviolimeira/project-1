@@ -1,5 +1,13 @@
 package com.sl.patterns.creational.factory;
 
+// ref: https://refactoring.guru/design-patterns/chain-of-responsibility/java/example
+
+/* Chain of Responsability
+    É um padrão de projeto comportamental que permite passar a solicitação ao
+longo da cadeia de handlers em potencial até que um deles lide com a solicitação.
+
+ */
+
 /**
  * RoundPegs are compatible with RoundHoles.
  */

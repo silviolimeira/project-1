@@ -1,4 +1,4 @@
-package com.sl.patterns.behavioral;
+package com.sl.patterns.behavioral.command;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,10 +8,10 @@ import java.util.Stack;
 
 abstract class Command {
 
-    public Editor editor;
+    public EditorDPCommand editor;
     private String backup;
 
-    Command(Editor editor) {
+    Command(EditorDPCommand editor) {
         this.editor = editor;
     }
 
@@ -28,7 +28,7 @@ abstract class Command {
 
 class CopyCommand extends Command {
 
-    public CopyCommand(Editor editor) {
+    public CopyCommand(EditorDPCommand editor) {
         super(editor);
     }
 
@@ -41,7 +41,7 @@ class CopyCommand extends Command {
 
 class PasteCommand extends Command {
 
-    public PasteCommand(Editor editor) {
+    public PasteCommand(EditorDPCommand editor) {
         super(editor);
     }
 
@@ -57,7 +57,7 @@ class PasteCommand extends Command {
 
 class CutCommand extends Command {
 
-    public CutCommand(Editor editor) {
+    public CutCommand(EditorDPCommand editor) {
         super(editor);
     }
 
@@ -93,7 +93,7 @@ class CommandHistory {
     public boolean isEmpty() { return history.isEmpty(); }
 }
 
-class Editor {
+class EditorDPCommand {
 
     public JTextArea textField;
 
@@ -116,7 +116,7 @@ class Editor {
         JButton ctrlV = new JButton("Ctrl+V");
         JButton ctrlZ = new JButton("Ctrl+Z");
 
-        Editor editor = this;
+        EditorDPCommand editor = this;
 
         ctrlC.addActionListener(new ActionListener() {
             @Override
@@ -171,7 +171,7 @@ class Editor {
 public class CommandExample {
 
     public static void main(String[] args) {
-        Editor editor = new Editor();
+        EditorDPCommand editor = new EditorDPCommand();
         editor.init();
     }
 

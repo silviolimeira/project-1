@@ -1,6 +1,7 @@
-package com.sl.patterns.behavioral;
+package com.sl.patterns.behavioral.mediator;
 
 import java.util.*;
+import java.util.List;
 
 interface ProfileIterator {
     boolean hasNext();

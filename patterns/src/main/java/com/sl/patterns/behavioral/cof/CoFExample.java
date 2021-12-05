@@ -1,4 +1,4 @@
-package com.sl.patterns.behavioral;
+package com.sl.patterns.behavioral.cof;
 
 import java.io.BufferedReader;
 import java.io.IOException;

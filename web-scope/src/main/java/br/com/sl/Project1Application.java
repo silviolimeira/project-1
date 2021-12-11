@@ -9,13 +9,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-//@SpringBootApplication
-//@Configuration
+@SpringBootApplication
+@Configuration
 //@ComponentScan(basePackages = "br.com.sl")
 //@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 @EnableScheduling
@@ -41,13 +42,13 @@ public class Project1Application {
 		System.out.println(emp1);
 	}
 
-	@PostConstruct
-	public void batch() {
-		//QuartzExample.test();
-		//System.out.println("Database name: " + Config.getDB(1));
-		//Config.testPersonDAO();
-		//JpaExample.test();
-	}
+//	@PostConstruct
+//	public void batch() {
+//		//QuartzExample.test();
+//		//System.out.println("Database name: " + Config.getDB(1));
+//		//Config.testPersonDAO();
+//		//JpaExample.test();
+//	}
 
 	@PreDestroy
 	public void preDestroy() {

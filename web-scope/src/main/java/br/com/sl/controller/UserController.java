@@ -14,6 +14,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @RestController
 public class UserController {
@@ -39,7 +41,13 @@ public class UserController {
         CompletableFuture<List<User>> users1=service.findAllUsers();
         CompletableFuture<List<User>> users2=service.findAllUsers();
         CompletableFuture<List<User>> users3=service.findAllUsers();
-        CompletableFuture.allOf(users1,users2,users3).join();
-        return  ResponseEntity.status(HttpStatus.OK).build();
+        //CompletableFuture.allOf(users1,users2,users3).thenCombine().join();
+
+        List users = Stream.of(users1, users2, users3)
+                .map(CompletableFuture::join)
+                .collect(Collectors.toList());
+
+        //return  ResponseEntity.status(HttpStatus.OK).build();
+        return ResponseEntity.ok(users);
     }
 }

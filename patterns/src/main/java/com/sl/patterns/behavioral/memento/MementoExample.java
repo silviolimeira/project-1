@@ -111,7 +111,7 @@ class Canvas extends java.awt.Canvas {
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
-                if ((e.getModifiers() & KeyEvent.CTRL_MASK) != 0) {
+                if ((e.getModifiersEx() & KeyEvent.CTRL_DOWN_MASK) != 0) {
                     switch (e.getKeyCode()) {
                         case KeyEvent.VK_Z:
                             editor.undo();

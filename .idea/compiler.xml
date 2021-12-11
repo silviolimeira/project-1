@@ -14,6 +14,7 @@
         <module name="project-1.web-data-wboot.main" />
         <module name="project-1.jwt.main" />
         <module name="project-1.transaction.main" />
+        <module name="project-1.web-scope.main" />
         <module name="project-1.jwt-caching.main" />
       </profile>
       <profile name="Gradle Imported" enabled="true">

@@ -31,6 +31,7 @@
             <option value="$PROJECT_DIR$/web" />
             <option value="$PROJECT_DIR$/web-client" />
             <option value="$PROJECT_DIR$/web-data-wboot" />
+            <option value="$PROJECT_DIR$/web-scope" />
           </set>
         </option>
       </GradleProjectSettings>

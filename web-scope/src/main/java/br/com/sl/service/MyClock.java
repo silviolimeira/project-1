@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class MyClock {
 
-    @Scheduled(initialDelay = 3000, fixedRate = 2000)
+    @Scheduled(initialDelay = 3000, fixedRate = 60000)
     public void tickTock()  {
         log.info("tick tock BEGIN");
         new Thread(() -> doSomeWork()).start();

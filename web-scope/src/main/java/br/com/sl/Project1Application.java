@@ -1,9 +1,12 @@
 package br.com.sl;
 
 
+import br.com.sl.model.Employee;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -11,7 +14,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@SpringBootApplication
+//@SpringBootApplication
 //@Configuration
 //@ComponentScan(basePackages = "br.com.sl")
 //@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
@@ -22,6 +25,20 @@ public class Project1Application {
 
 		SpringApplication.run(Project1Application.class, args);
 
+	}
+
+	@Autowired
+	ApplicationContext context;
+
+	@PostConstruct
+	public void postConstruct() {
+		Employee emp = context.getBean(Employee.class);
+		System.out.println(emp);
+		emp.setName("Rohan");
+		System.out.println(emp);
+
+		Employee emp1 = context.getBean(Employee.class);
+		System.out.println(emp1);
 	}
 
 	@PostConstruct

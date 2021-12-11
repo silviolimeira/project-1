@@ -24,7 +24,7 @@ public class UserService {
 
     Logger logger = LoggerFactory.getLogger(UserService.class);
 
-    @Async
+    @Async("taskExecutor")
     public CompletableFuture<List<User>> saveUsers(MultipartFile file) throws Exception {
         long start = System.currentTimeMillis();
         List<User> users = parseCSVFile(file);
@@ -35,7 +35,7 @@ public class UserService {
         return CompletableFuture.completedFuture(users);
     }
 
-    @Async
+    @Async("taskExecutor")
     public CompletableFuture<List<User>> findAllUsers(){
         logger.info("get list of user by "+Thread.currentThread().getName());
         List<User> users=repository.findAll();

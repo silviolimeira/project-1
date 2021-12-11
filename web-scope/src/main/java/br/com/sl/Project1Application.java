@@ -5,6 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -13,6 +15,7 @@ import javax.annotation.PreDestroy;
 //@Configuration
 //@ComponentScan(basePackages = "br.com.sl")
 //@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+@EnableScheduling
 public class Project1Application {
 
 	public static void main(String[] args) {

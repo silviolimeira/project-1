@@ -23,9 +23,11 @@ public class ShapeFactory {
         if (choice.equals("T")) {
             System.out.println("Triangle Area");
             nshape.area(x, y);
+            System.out.println("origin: " + nshape);
         } else if (choice.equals("R")) {
             System.out.println("Rectangle Area");
             shape.area(x, y);
+            System.out.println("origin: " + shape);
         } else {
             System.out.println("Wrong Choice");
         }

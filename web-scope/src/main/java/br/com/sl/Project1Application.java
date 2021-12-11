@@ -2,6 +2,8 @@ package br.com.sl;
 
 
 import br.com.sl.model.Employee;
+import br.com.sl.training.Shape;
+import br.com.sl.training.ShapeFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -31,6 +33,9 @@ public class Project1Application {
 	@Autowired
 	ApplicationContext context;
 
+    @Autowired
+	ShapeFactory factory;
+
 	@PostConstruct
 	public void postConstruct() {
 		Employee emp = context.getBean(Employee.class);
@@ -40,6 +45,12 @@ public class Project1Application {
 
 		Employee emp1 = context.getBean(Employee.class);
 		System.out.println(emp1);
+
+        System.out.println("Training App");
+        factory.printArea("T", 10, 20);
+		factory.printArea("T", 10, 20);
+        factory.printArea("R", 10, 20);
+		factory.printArea( "R", 10, 20);
 	}
 
 //	@PostConstruct

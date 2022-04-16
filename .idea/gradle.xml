@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/config" />
             <option value="$PROJECT_DIR$/data-wboot" />
             <option value="$PROJECT_DIR$/javafuncional" />
+            <option value="$PROJECT_DIR$/jsp-hibernate" />
             <option value="$PROJECT_DIR$/jwt" />
             <option value="$PROJECT_DIR$/jwt-caching" />
             <option value="$PROJECT_DIR$/jwt-caching-jpa-pages" />

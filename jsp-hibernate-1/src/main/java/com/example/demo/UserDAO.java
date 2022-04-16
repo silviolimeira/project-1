@@ -3,6 +3,9 @@ package com.example.demo;
 import com.example.demo.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Query;
+import org.hibernate.Transaction;
+
 import java.util.List;
 
 
@@ -58,7 +61,7 @@ public class UserDAO {
 		return employee;
 	}
 
-	public List<User> selectAllUsers() {
+	public List<User> selectAllUsersWithHQL() {
 		List<User> empList = null;
 		try {
 			factory = SessionFactoryUtil.getSessionFactory();
@@ -70,6 +73,26 @@ public class UserDAO {
 		}
 		return empList;
 	}
+
+	//SelectAllUsersWithQuery()
+	public List<User> selectAllUsers() {
+		List<User> empList = null;
+		try {
+			factory = SessionFactoryUtil.getSessionFactory();
+			session= factory.openSession();
+			Transaction transaction = session.beginTransaction();
+			Query query = session.createSQLQuery("select * from employee")
+					.addEntity(User.class);
+			empList = query.list();
+			transaction.commit();
+			session.close();
+			factory.close();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return empList;
+	}
+
 
 	public boolean updateUser(User user)  {
 		boolean flag = false;
@@ -86,5 +109,7 @@ public class UserDAO {
 		}
 		return flag;
 	}
+
+
 
 }

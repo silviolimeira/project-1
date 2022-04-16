@@ -26,6 +26,7 @@
             <option value="$PROJECT_DIR$/openjfx" />
             <option value="$PROJECT_DIR$/patterns" />
             <option value="$PROJECT_DIR$/spring-jpa" />
+            <option value="$PROJECT_DIR$/spring-jsp" />
             <option value="$PROJECT_DIR$/swing" />
             <option value="$PROJECT_DIR$/transaction" />
             <option value="$PROJECT_DIR$/utils" />

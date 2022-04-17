@@ -1,0 +1,25 @@
+Java JSP com Servlets e Hibernate
+
+https://github.com/athulkrishnan97/Java_JSP_with_Servlets_and_Hibernate_Mysql/blob/master/build.gradle
+
+
+-------------------------------------------------------------------------------
+Implementing Spring Boot MVC CRUD operations with JPA and JSP
+
+https://mmafrar.medium.com/implementing-spring-boot-mvc-crud-operations-with-jpa-and-jsp-4dfa1882b4a3
+
+GitHub
+https://github.com/mmafrar/spring-mvc-crud-example
+
+git clone https://github.com/mmafrar/spring-mvc-crud-example.git
+
+
+-------------------------------------------------------------------------------
+Install Node.js and NPM Kali Linux [Step-by-Step]
+
+https://www.golinuxcloud.com/install-node-js-and-npm-kali-linux/
+
+
+Install netbeans in Kali Linux
+https://www.bing.com/videos/search?q=install+netbeans+live+kali+linux&docid=608009855767772643&mid=1BE8F52CEA6BDED694E31BE8F52CEA6BDED694E3&view=detail&FORM=VIRE
+

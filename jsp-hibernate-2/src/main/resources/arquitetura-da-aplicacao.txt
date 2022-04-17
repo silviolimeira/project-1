@@ -1,0 +1,143 @@
+Arquitetura da Aplicação
+
+   No capítulo 2 foi apresentado um exemplo utilizando o padrão
+MVC. Para aquele escopo de aplicação no qual tudo foi resolvido no
+bom e velho código Java puro, a arquitetura apresentada atendia aos
+objetivos pretendidos de forma adequada, entretanto, quando se utiliza
+o Hibernate, é interessante e prático fazermos algumas modificações na
+arquitetura para adequá-las aos recursos que serão utilizados.
+    Na aplicação apresentada no capítulo 2, foram criados componentes
+service (do design pattern Application Services) com a finalidade
+exclusiva de implementar as regras de negócio, o que resultou no
+aumento de componentes da aplicação. Esses componentes foram
+definidos e representados no componente Model do MVC.
+    Boa parte dos desenvolvedores que utilizam o Hibernate implementam
+as regras de negócio nos beans do componente Model do MVC (também
+conhecidos como sinônimo de classes de persistência, POJOs, classes
+de modelo etc.)
+    Bauer e King definem POJOs como acrônimo de
+Plain Old Java Objects ou Plain Ordinary Java Objects, termo utilizado
+como sinônimo de JavaBeans um modelo de componente para
+desenvolvimento de interface com o usuário, aplicado na camada de
+negócios (Model do MVC)
+    Um POJO declara métodos de negócio, que definem o
+comportamento, e propriedade, que representam o estado. Algumas
+propriedades representam associações para outros POJOs definidos
+pelo usuário (BAUER, KING, 207, P.114)
+    Note que não é "peacdo" implementar as regras de negócio nos
+beans do componente Model do MVC e no caso na construção de
+aplicações com Hibernate, esse é um procedimento comum utilizado
+pelos desenvolvedores. O bom senso deve guiar a definição da melhor
+estratégia de construção das regras de negócio, dependendo de fatores
+como quantidade de regras de negócio, tipos de recursos utilizados no
+projeto etc.
+    A Figura 4-14 mostra a distribuição dos componentes na arquitetura
+utilizada nesse aplicação exemplo.
+
+[]
+
+    No componente Model do MVC foram utilizados dois padrões de
+projeto (design patterns): Data Access Object (DAO) e o Command.
+    O DAO concentra a responsabilidade pelo acesso aos dados e o
+Command separa a invocação dos métodos da execução e possibilita a
+adição de novas classes Command sem modificar as classes existentes.
+
+    Basicamente o Model concentra:
+
+    - As classes JavaBean (Transfer Object - TO ou View Object - VO);
+    - Uma interface Command e diversas classes Command (Business
+      Object - BO) que implementam os métodos  abstratos dessa
+      interface;
+    - Uma interface DAO e uma classe que implementa os métodos
+      abstratos dessa interface;
+    - Um banco de dados MySQL.
+
+    No componente Controller do MVC foi utilizado o padrão de
+projeto Front Controller que permite centralizar o processamento
+das requisições e direcioná-las para o componente apropriado. No
+Controller foi utilizada apenas uma servlet.
+    No componente View do MVC foram utilizadas páginas JSP,
+arquivos CSS e JavaScript. Esse componente é responsável por
+apresentar o conteúdo ao usuário, seja na forma de menus, formulários,
+resultados de processamento etc. O CSS foi utilizado para definir o
+estilo ou formatação dos dados JavaScript para validar entradas em
+formulários.
+    Fora das camadas da aplicação está um conjunto de classes de
+infraestrutura composta por classe de ajuda (helper), de utilidade
+(utility) e de interceptação ou filtro (filter).
+    Foi utilizado o design pattern Intercepting Filter para interceptar as
+requisições e realizar algum processamento e para viabilizar a adição
+de vários filtros. Basicamente o Intercepting Filter foi utilizado com a
+intenção de iniciar uma sessão do Hibernate no início da requisição e
+mantê-la aberta durante todo o ciclo da requisição.
+
+Distribuição dos componentes nas camadas do MVC
+
+Os componentes do projeto (beans, servlets, filtros, interfaces,
+arquivos de configuração e mapeamento, páginas JSP, arquivos CSS e
+JavaScript) estão apresentados na tabela 4.3
+
+MVC     Componente      Descrição
+
+View
+        cadastro_departamento.jsp
+                        Formulário para cadastro de departamentos
+
+        cadastro_funcionario.jsp
+                        Formulário para cadastro dos funcionários
+
+        atualiza_departamento.jsp
+                        Formulário para modificar os dados dos departamentos
+
+        consulta_departamento.jsp
+                        Página para exibir os departamentos cadastrados
+                        e os funcionários de cada departamento
+                        ao posicionar o mouse sobre o departamento desejado
+
+        consulta_funcionario.jsp
+                        Página para exibir os dados dos
+                        funcionários cadastrados e permitir
+                        por meio de um formulário definir
+                        critérios para pesquisa.
+
+        config.css
+                        Arquivo de formatação CSS que
+                        define o estilo dos elementos das
+                        páginas.
+
+        valida_departamento.js
+                        Arquivo JavaScript para validar a
+                        entrada dos dados do funcionário.
+
+        valida_funcionario.js
+                        Arquivo JavaScript para validar a
+                        entrada dos dados dos funcionário.
+
+        menu.jspf
+                        Fragmento de código JSP para gerar
+                        um menu. Esse fragmento será
+                        inserido em todas as páginas JSP para
+                        que o menu fique sempre visível na
+                        tela.
+
+
+Controller
+
+        Controle.java
+                        Servlet que permite centralizar o
+                        processamento das requisições e
+                        direcioná-las para o componente
+                        apropriado.
+
+
+Model
+        Departamento.java
+                        Bean ou classe de persistência que
+                        permite a inserção, atualização ou
+                        consulta de departamento na tabela
+                        do banco de dados.
+
+
+
+
+

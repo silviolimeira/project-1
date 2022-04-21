@@ -1,18 +1,24 @@
 package com.example.demo.model.bean;
 
 import javax.persistence.*;
+import java.awt.print.Book;
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "funcionario")
 public class Funcionario {
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "IdeDep", nullable = false)
+    private Departamento departamento;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "IdeFun", nullable = false)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "IdeDep", nullable = false)
+    @JoinColumn(name = "IdeDep", nullable = false, insertable = false, updatable = false)
     private Departamento ideDep;
 
     @Column(name = "NomFun", length = 50)
@@ -33,14 +39,6 @@ public class Funcionario {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Departamento getIdeDep() {
-        return ideDep;
-    }
-
-    public void setIdeDep(Departamento ideDep) {
-        this.ideDep = ideDep;
     }
 
     public String getNomFun() {
@@ -73,6 +71,22 @@ public class Funcionario {
 
     public void setSalFun(BigDecimal salFun) {
         this.salFun = salFun;
+    }
+
+    public Departamento getIdeDep() {
+        return ideDep;
+    }
+
+    public void setIdeDep(Departamento ideDep) {
+        this.ideDep = ideDep;
+    }
+
+    public Departamento getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(Departamento departamento) {
+        this.departamento = departamento;
     }
 
 }

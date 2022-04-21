@@ -1,10 +1,20 @@
 package com.example.demo.model.bean;
 
 import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "departamento")
 public class Departamento {
+
+
+    // In Customer class:
+
+    @OneToMany(mappedBy = "departamento", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private Set<Funcionario> funcionarios;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "IdeDep", nullable = false)
@@ -40,4 +50,11 @@ public class Departamento {
         this.telDep = telDep;
     }
 
+    public Set<Funcionario> getFuncionarios() {
+        return funcionarios;
+    }
+
+    public void setFuncionarios(Set<Funcionario> funcionarios) {
+        this.funcionarios = funcionarios;
+    }
 }

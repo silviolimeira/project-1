@@ -136,6 +136,85 @@ Model
                         permite a inserção, atualização ou
                         consulta de departamento na tabela
                         do banco de dados.
+        Funcionario.Java
+        Departamento.hbm.xml
+                        Arquivo de Mapeamento da classe Departamento.java
+                        que define os metadados utilizados para persistir
+                        objectos departamento no banco de dados
+        Funcionario.hbm.xml
+
+        InterfaceCommand.Java
+                        Interface utilizada para obrigar as
+                        classes command a implementar
+                        o método execute que por meio da
+                        classe HibernateDAO.java executam
+                        comandos no banco de dados.
+        CadastrarDepartamento.java
+                        Classe command que por meio
+                        do metodo execute utiliza a classe
+                        HibernateDAO.java para salvar um
+                        objeto departamento no banco de dados
+        CadastrarFuncionario.java
+        AtualizarDepartamento.java
+        AtualizarFuncionario.java
+        ConsultarDepartamento.java
+        ConsultarFuncionario.java
+        ExcluirDepartamento.java
+        ExcluirFuncionario.java
+        PesquisarFuncionario.java
+
+        InterfaceDAO.java
+                        Interface que força a classe
+                        HibernateDAO.java a implementar
+                        os métodos abstratos salvar,
+                        atualizar, excluir, getBean, getBeans
+                        e getBeansByExample
+
+        HibernateDAO.java
+                        Classe Java que implementa a
+                        interface InterfaceDAO.java e
+                        implementa os métodos salvar,
+                        atualizar, excluir, getBean,
+                        getBeans e getBeansByExample.
+                        Esses métodos salvar, atualizam,
+                        excluem, consultam, listam tudo e
+                        listam dados do banco de dados por
+                        critérios.
+
+Interceptadores,
+utilitários e classes
+de ajuda etc.
+                        HibernateUtil.java
+                            Permite o gerenciamento de sessões
+                            (unidades de trabalho) do Hibernate
+                            para executar operações no banco
+                            de dados.
+
+                        Helper.java
+                            Classe que permite, a partir da chegada
+                        de uma requisição, identificar qual
+                        será a classe Command responsável
+                        por executar o comando relativo à
+                        operação desejada no banco de dados.
+
+                        FiltroHibernate.Java
+                            Classe que filtra todas as requisições
+                            da aplicação. Quando o servlet
+                            Controle.java receber uma requisição
+                            ela é encaminhada a essa classe e
+                            uma sessão do Hibernate é iniciada.
+                            Quando os comandos desejados nessa
+                            requisição são executados essa classe
+                            finaliza a sessão do Hibernate.
+
+                        hibernate.hbm.xml
+                            Arquivo de configuração do
+                            Hibernate. Esse arquivo configura a
+                            conexão da aplicação com o banco de
+                            dados, o pool de conexões, a exibição
+                            de instruções SQL no console e os
+                            arquivos XML utilizados para fazer o
+                            mapeamento objeto/relacional
 
 
 

@@ -4,13 +4,26 @@
         "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
+
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/project1?useTimezone=true&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true&amp;useSSL=false</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">admin</property>
 
-        <property name="hibernate.connection.pool_size">1</property>
-        <property name="hibernate.current_session_context_class">thread</property>
+        <!-- Hikari specific properties -->
+        <property name="connection.provider_class">com.zaxxer.hikari.hibernate.HikariConnectionProvider</property>
+        <property name="hikari.dataSource.cachePrepStmts">true</property>
+        <property name="hikari.dataSource.prepStmtCacheSize">250</property>
+        <property name="hikari.dataSource.prepStmtCacheSqlLimit">2048</property>
+        <property name="hikari.dataSource.useServerPrepStmts">true</property>
+        <property name="hikari.maximumPoolSize">30</property>
+        <property name="hikari.idleTimeout">300000</property>
+        <property name="hikari.connectionTimeout">20000</property>
+        <property name="hikari.minimumIdle">10</property>
+
+
+<!--        <property name="hibernate.connection.pool_size">1</property>-->
+<!--        <property name="hibernate.current_session_context_class">thread</property>-->
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <property name="hbm2ddl.auto">update</property>

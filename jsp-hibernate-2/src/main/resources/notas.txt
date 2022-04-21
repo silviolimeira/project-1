@@ -1,3 +1,14 @@
+
+You can open MYSQL console and query by typing this query.
+as an example, I have added 10 connections for the pool.
+the username of the connection is mafei_connection_test.
+then you can see the all connection that the MySQL server
+created and currently opening.
+
+show processlist;
+SHOW PROCESSLIST;
+
+
 Java JSP com Servlets e Hibernate
 
 https://github.com/athulkrishnan97/Java_JSP_with_Servlets_and_Hibernate_Mysql/blob/master/build.gradle

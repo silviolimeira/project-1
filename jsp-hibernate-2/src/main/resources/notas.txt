@@ -8,6 +8,10 @@ created and currently opening.
 show processlist;
 SHOW PROCESSLIST;
 
+Verificando o pool de conexoes Hiraki pelo netstat
+netstat -o -n -a | findstr :3306
+
+
 
 Java JSP com Servlets e Hibernate
 

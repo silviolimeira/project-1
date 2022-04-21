@@ -23,7 +23,7 @@
 		<!-- <div class="alert alert-success" *ngIf='message'>{{message}}</div> -->
 
 		<div class="container">
-			<h3 class="text-center">List of Employees :)</h3>
+			<h3 class="text-center">List of Employees ;)</h3>
 			<hr>
 			<div class="container text-left">
 

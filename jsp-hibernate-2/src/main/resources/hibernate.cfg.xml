@@ -8,15 +8,17 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/project1?useTimezone=true&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true&amp;useSSL=false</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">admin</property>
-        
+
         <property name="hibernate.connection.pool_size">1</property>
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <property name="hbm2ddl.auto">update</property>
-      <!--   <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>  -->
+        <!--   <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>  -->
 
         <!--  POJO Details   -->
         <mapping class="com.example.demo.model.User"/>
+        <mapping class="com.example.demo.model.bean.Departamento"/>
+        <mapping class="com.example.demo.model.bean.Funcionario"/>
     </session-factory>
 </hibernate-configuration>

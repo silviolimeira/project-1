@@ -13,7 +13,7 @@
 </head>
 <body>
 Current Date and Time is: <m:date/>
-<h1><%= "Manage Departamento" %>
+<h1><%= "Manage Departamento tututu" %>
 </h1>
 <br/>
 <a href="${pageContext.request.contextPath}/user-form.jsp" class="btn btn-success">Insert</a>

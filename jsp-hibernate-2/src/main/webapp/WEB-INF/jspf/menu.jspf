@@ -1,0 +1,11 @@
+<%@ page pageEncoding="UTF-8" %>
+<fieldset>
+    <legend>Opções</legend>
+    <h4>Departamento</h4>
+    <ul>
+        <li>
+            <a href="controle?comando=cadastrarDepartamento">Cadastrar</a>
+        </li>
+    </ul>
+    <h4>Funcionário</h4>
+</fieldset>

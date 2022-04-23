@@ -20,6 +20,9 @@ Current Date and Time is: <m:date/>
 <a href="${pageContext.request.contextPath}/delete" class="btn btn-success">Delete</a>
 <a href="${pageContext.request.contextPath}/list" class="btn btn-success">List Employees</a>
 <a href="${pageContext.request.contextPath}/find-emp.jsp" class="btn btn-success">Update Employee Info</a>
+<div id="esquerdo">
+    <%@include file="/WEB-INF/jspf/menu.jspf"%>
+</div>
 </body>
 <div class="fixed-bottom">
     <jsp:include page="/footer.jsp" />

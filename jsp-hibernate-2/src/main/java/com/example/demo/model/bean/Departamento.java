@@ -9,8 +9,6 @@ import java.util.Set;
 public class Departamento {
 
 
-    // In Customer class:
-
     @OneToMany(mappedBy = "departamento", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
     private Set<Funcionario> funcionarios;
@@ -56,5 +54,21 @@ public class Departamento {
 
     public void setFuncionarios(Set<Funcionario> funcionarios) {
         this.funcionarios = funcionarios;
+    }
+
+
+    public boolean isValido() {
+        if (nomDep == null || nomDep.equals("")) {
+            return false;
+        }
+        return true;
+    }
+    public Integer getFuncionarioSize() {
+
+        if (getFuncionarios() != null) {
+            Integer i = funcionarios.size();
+        }
+
+        return 0;
     }
 }

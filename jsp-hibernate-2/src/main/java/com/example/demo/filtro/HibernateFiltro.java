@@ -21,20 +21,32 @@ public class HibernateFiltro implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+
         Session session = null;
+
         try {
             session = HibernateUtil.getSessionFactory().openSession();
+
             session.beginTransaction();
 
             request.setAttribute(HibernateUtil.HIBERNATE_SESSION, session);
+
             chain.doFilter(request, response);
+
             session = (Session) request.getAttribute(HibernateUtil.HIBERNATE_SESSION);
+
             session.flush();
+
             session.getTransaction().commit();
+
         } catch (HibernateException e) {
+
             session.getTransaction().rollback();
+
         } finally {
+
             session.close();
+
         }
     }
 

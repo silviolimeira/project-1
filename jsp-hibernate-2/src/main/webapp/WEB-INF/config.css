@@ -188,7 +188,7 @@ thead, td, tr {
 }
 
 #mensagem {
-    height: 20px;
+    background: yellow;
+    display: block;
     width: 100%;
-    color: red;
 }

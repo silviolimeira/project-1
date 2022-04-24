@@ -1,5 +1,7 @@
 package com.example.demo.filtro;
 
+import org.apache.cxf.transport.commons_text.StringEscapeUtils;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
@@ -19,6 +21,11 @@ public class CharsetFilter implements Filter {
             throws IOException, ServletException {
         // Respect the client-specified character encoding
         // (see HTTP specification section 3.4.1)
+//        String mensagem = request.getParameter("mensagem");
+//        if (null != mensagem) {
+//            mensagem = StringEscapeUtils.escapeHtml4(mensagem);
+//            request.setAttribute("mensagem", mensagem);
+//        }
         if (null == request.getCharacterEncoding()) {
             request.setCharacterEncoding(encoding);
         }

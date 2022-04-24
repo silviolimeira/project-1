@@ -26,7 +26,7 @@ public class CadastrarDepartamento implements InterfaceCommand {
                 deparamentoDAO.salvar(departamento);
                 request.setAttribute("mensagem", "Departamento " + departamento.getNomDep() + " gravado com sucesso.");
             } else if (request.getMethod().equalsIgnoreCase("post")) {
-                request.setAttribute("mensagem", "Preencha os campos obrigatórios");
+                //request.setAttribute("mensagem", "Preencha os campos obrigatórios");
             }
         } catch (Exception e) {
             request.setAttribute("mensagem", "Problemas com a gravação: " + e.getMessage());

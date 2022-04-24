@@ -11,16 +11,17 @@
 <body>
     Current Date and Time is: <m:date/>
     <div id="principal">
+        <h1>Cadastro de Departamentos - Acentuação</h1>
+
         <div id="topo">
-            <h1>Cadastro de Departamentos - Acentuação</h1>
-            <h4 id="mensagem">
+            <div id="mensagem">
+            </div>
             <%
               if (request.getAttribute("mensagem") != null) {
                 String mensagem = request.getAttribute("mensagem").toString();
                 out.println("xi" + mensagem);
               }
             %>
-            </h4>
         </div>
         <div id="direito">
             <fieldset>

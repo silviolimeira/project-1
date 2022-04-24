@@ -8,15 +8,15 @@ function verificarTelefone() {
         if (document.form.nome.value != "") {
             return true;
         } else {
-            document.getElementById("mensagem").innerHTML =
-                "O preenchimento do campo nome é obrigatório.";
+                document.getElementById("mensagem").innerHTML =
+                    "O preenchimento do campo nome é obrigatório.";
                 document.form.nome.focus();
                 return false;
         }
     } else {
 
         document.getElementById("mensagem").innerHTML =
-            "xx Telefone inválido x.";
+            "x1x Telefone inv&aacute;lido x.";
             document.form.telefone.focus();
             return false;
     }

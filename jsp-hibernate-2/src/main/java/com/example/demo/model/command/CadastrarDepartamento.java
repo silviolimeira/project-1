@@ -4,6 +4,7 @@ import com.example.demo.model.bean.Departamento;
 import com.example.demo.model.dao.HibernateDAO;
 import com.example.demo.model.dao.InterfaceDAO;
 import com.example.demo.util.HibernateUtil;
+import org.apache.cxf.transport.commons_text.StringEscapeUtils;
 import org.hibernate.Session;
 
 import javax.servlet.http.HttpServletRequest;

@@ -14,8 +14,9 @@ function verificarTelefone() {
                 return false;
         }
     } else {
+
         document.getElementById("mensagem").innerHTML =
-            "Telefone inválido x.";
+            "xx Telefone inválido x.";
             document.form.telefone.focus();
             return false;
     }

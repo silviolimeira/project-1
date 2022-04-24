@@ -186,3 +186,9 @@ thead, td, tr {
 .cab_tabela {
     background-color: #E6E6E6;
 }
+
+#mensagem {
+    height: 20px;
+    width: 100%;
+    color: red;
+}

@@ -3,6 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+        </jsp-property-group>
+    </jsp-config>
+
     <filter>
         <filter-name>HibernateFiltro</filter-name>
         <filter-class>com.example.demo.filtro.HibernateFiltro</filter-class>
@@ -11,4 +19,18 @@
         <filter-name>HibernateFiltro</filter-name>
         <url-pattern>*</url-pattern>
     </filter-mapping>
+
+<!--    <filter>-->
+<!--        <filter-name>CharsetFilter</filter-name>-->
+<!--        <filter-class>com.example.demo.filtro.CharsetFilter</filter-class>-->
+<!--        <init-param>-->
+<!--            <param-name>requestEncoding</param-name>-->
+<!--            <param-value>UTF-8</param-value>-->
+<!--        </init-param>-->
+<!--    </filter>-->
+
+<!--    <filter-mapping>-->
+<!--        <filter-name>CharsetFilter</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
 </web-app>

@@ -24,10 +24,10 @@
                 out.println("xi" + mensagem);
               }
               //String unEscapedString = "<java>public static void main(String[] args) { ... }</java>";
-              String unEscapedString = "Teste de Acentuação";
-              String escapedHTML = StringUtils.encodeHtml(unEscapedString);
+              //String unEscapedString = "Teste de Acentuação";
+              //String escapedHTML = StringUtils.encodeHtml(unEscapedString);
 
-              out.println(escapedHTML);  //Browser can now parse this and print
+              //out.println(escapedHTML);  //Browser can now parse this and print
             %>
         </div>
         <div id="direito">

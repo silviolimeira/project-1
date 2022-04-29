@@ -11,9 +11,11 @@ plugins {
     id 'application'
 }
 
-group = 'br.com.sl'
+group = 'com.sl.tool'
 version = '1.0'
-sourceCompatibility = '11'
+//sourceCompatibility = '11'
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -21,6 +23,10 @@ repositories {
 }
 
 dependencies {
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-text
+    implementation group: 'org.apache.commons', name: 'commons-text', version: '1.9'
+
+
     // Use JUnit Jupiter for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
 

@@ -11,7 +11,7 @@ plugins {
     id 'application'
 }
 
-group = 'br.com.sl'
+group = 'com.sl'
 version = '1.0'
 sourceCompatibility = '11'
 

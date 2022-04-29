@@ -2,7 +2,7 @@ package com.sl.tool;
 
 import java.util.HashMap;
 
-public class StringUtils1
+public class StringUtils
 {
     private static final HashMap<Character, String> htmlEncodeChars = new HashMap<>();
 
@@ -269,7 +269,7 @@ public class StringUtils1
         htmlEncodeChars.put('\u2666', "&diams;");
     }
 
-    private StringUtils1()
+    private StringUtils()
     {
     }
 

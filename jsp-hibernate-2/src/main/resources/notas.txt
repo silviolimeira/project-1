@@ -1,4 +1,8 @@
 
+Build a Multiple Module Project with Gradle
+https://o7planning.org/11243/build-a-multiple-module-project-with-gradle
+
+
 You can open MYSQL console and query by typing this query.
 as an example, I have added 10 connections for the pool.
 the username of the connection is mafei_connection_test.

@@ -46,6 +46,11 @@ dependencies {
 
     compileOnly group: 'javax.servlet.jsp', name: 'javax.servlet.jsp-api', version: '2.3.1'
 
+    implementation project(':stringUtils')
+//    group = 'br.com.sl'
+//    version = '1.0'
+//    implementation group: 'org.apache.commons', name: 'commons-text', version: '1.9'
+
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }

@@ -1,4 +1,3 @@
-//var t = /^\(\d{2}\)\d{4}-\d{4}\$/;
 
 function verificarTelefone() {
 
@@ -16,7 +15,7 @@ function verificarTelefone() {
     } else {
 
         document.getElementById("mensagem").innerHTML =
-            "x1x Telefone inv&aacute;lido x.";
+            encodeHtml("x1x Telefone inválido x.");
             document.form.telefone.focus();
             return false;
     }

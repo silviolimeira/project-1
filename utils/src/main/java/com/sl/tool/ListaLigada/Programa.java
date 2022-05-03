@@ -6,7 +6,7 @@ public class Programa {
 
         System.out.println("\n==============================================================\n");
 
-        ListaLigada lista = new ListaLigada();
+        ListaLigada<String> lista = new ListaLigada<String>();
         lista.adicionar("AC");
         lista.adicionar("BA");
         lista.adicionar("CE");

@@ -1,4 +1,14 @@
 
+
+Ctrl + Alt + S ---> InteliJ IDE
+===============================================================
+    Settings > File Encodings > Global Encoding: ISO-8859-1
+                                Project Encoding: ISO-8859-1
+
+    Default encoding for properties files: ISO-8859-1
+
+
+
 Build a Multiple Module Project with Gradle
 https://o7planning.org/11243/build-a-multiple-module-project-with-gradle
 

@@ -8,14 +8,14 @@ function verificarTelefone() {
             return true;
         } else {
             document.getElementById("mensagem").innerHTML =
-                "O preenchimento do campo nome √© obrigat√≥rio.";
+                "O preenchimento do campo nome È obrigatÛrio.";
             document.form.nome.focus();
             return false;
         }
     } else {
 
         document.getElementById("mensagem").innerHTML =
-            encodeHtml("x1x Telefone inv√°lido x.");
+            "„È x1x Telefone inv·lido x.";
             document.form.telefone.focus();
             return false;
     }

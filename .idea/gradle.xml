@@ -24,8 +24,11 @@
             <option value="$PROJECT_DIR$/jwt-caching" />
             <option value="$PROJECT_DIR$/jwt-caching-jpa-pages" />
             <option value="$PROJECT_DIR$/jwt-report" />
+            <option value="$PROJECT_DIR$/library-sample" />
+            <option value="$PROJECT_DIR$/library-sample-use" />
             <option value="$PROJECT_DIR$/openjfx" />
             <option value="$PROJECT_DIR$/patterns" />
+            <option value="$PROJECT_DIR$/plugin" />
             <option value="$PROJECT_DIR$/spring-jpa" />
             <option value="$PROJECT_DIR$/spring-jsp" />
             <option value="$PROJECT_DIR$/stringUtils" />

@@ -1,0 +1,37 @@
+
+Example Library
+https://www.youtube.com/watch?v=K96rDeiKT-g
+
+
+How to use Gradle api vs. implementation dependencies (with the Java Library plugin)
+9.391 visualizações  2 de mar. de 2020  The Gradle Java Library Plugin is the recommended plugin to use when building libraries that will be consumed by another project. It offers the ability to distinguish between api and implementation dependencies, offering some key benefits for whoever consumes the library.
+
+In this video you’ll learn the main differences between api and implementation configurations with a real-world example showing exactly how things work under the covers.
+
+GITHUB
+Get the code used in the example in the video:
+Library code https://github.com/tkgregory/gradle-j...
+Consumer code https://github.com/tkgregory/gradle-j...
+
+THIS VIDEO IN ARTICLE FORMAT
+Check out this article on the same topic on my blog https://tomgregory.com/how-to-use-gra...
+
+DOCS
+See these Gradle docs for more info about the Java Library Plugin https://docs.gradle.org/current/userg...
+
+🚀 FREE GRADLE INTRODUCTORY COURSE - Get Going with Gradle - the fastest way to a working knowledge of Gradle https://learn.tomgregory.com/courses/...
+
+🦸 GRADLE HERO COURSE TO MASTER JAVA PROJECTS - take back control of your Gradle build https://learn.tomgregory.com/courses/...
+
+💌 Sign up to my monthly newsletter https://tomgregory.com/subscribe
+
+🌍 Check out my website https://tomgregory.com
+
+
+
+Gradle 7.4.2 Documentation Site
+https://docs.gradle.org/7.4.2/userguide/userguide.html
+
+https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:tasks
+
+

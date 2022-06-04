@@ -31,3 +31,7 @@ include('javafuncional')
 include('swing')
 include('patterns')
 include('openjfx')
+include('plugin')
+include('library-sample')
+include('library-sample-use')
+
